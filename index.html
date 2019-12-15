@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV - David Ferrer Pérez</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/main.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/radar.js">
+        </script>
+        <script type="text/javascript">
+            
+            $(function() {
+                
+                var documentEl = $(document),
+                    fadeElem = $('.fade-scroll');
+                
+                
+                documentEl.on('scroll', function() {
+                    var currScrollPos = documentEl.scrollTop();
+                    
+                    fadeElem.each(function() {
+                        var $this = $(this),
+                            elemOffsetTop = $this.offset().top;
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
+                    }); 
+                });
+                
+            });
+        
+        </script>
+        <script>
+                // When the user clicks on div, open the popup
+                
+
+                function required(){
+                    var empt = document.getElementById("address").value;
+                    var empt1 = document.getElementById("msg").value;
+
+                    if (empt == ""){
+                        alert("Please input an email address");
+                        return false;
+                        }
+                    else{
+                        if (empt1 == ""){
+                            alert("Please input a non-empty message");
+                            return false;
+                        }
+                        else{
+                            var popup = document.getElementById("myPopup");
+                            popup.classList.toggle("show");
+                        }
+                    }
+                }
+        </script>
+        <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">David Ferrer Pérez</a></li>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="email-btn" data-toggle="modal" data-target="#myModal"><img style="height: 25px; margin-top: 2px;" src="Images/Envelope.png" /></button>
+
+                <div class="mdal fade" id="myModal" role="dialog">
+                        <div class="mdal-dialog">
+                            <!-- Modal content-->
+                            <div class="mdal-content">
+                                <div class="mdal-header">
+                                    <h4 class="mdal-title">Contact me</h4>
+                                    <button class="clse" type="button" data-dismiss="modal"><b>X</b></button>
+                                </div>
+                                <div class="mdal-body">
+                                    <p style="font-size: 10pt; margin-top: 2px; margin-bottom: 2px;">Your e-mail:</p>
+                                    <input type="text" id="address" class="address-box"><br>
+                                    <p style="font-size: 10pt; margin-top: 6px; margin-bottom: 2px;">Message:</p>
+                                    <input type="text" id="msg" class="email-box"><br>
+                                </div>
+                                <div class="mdal-footer">
+                                    <div style="background-color: #14a76c; color:#272727" class="popup" onclick="required()"><p class="btn-text"><b>Send</b></p>
+                                    <span class="popuptext" id="myPopup">E-mail sent!</span></div>
+                                    <button style="border: 1px solid; font-size: 16px" type="button" class="btn btn-def" data-dismiss="modal"><b>Close</b></button>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                </div>
+        </header>
+        
+        <div style="margin-top: 0;background-image: url(Images/valencia.jpg);" class="fade-scroll">
+            <span class="profile-span">
+                <div class="container">
+                    <img src="images/profile.jpg" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                            <button type="button" class="contact-btn" data-toggle="modal" data-target="#myModal"><b>Contact</b></button>
+                    </div>
+                </div>
+            </span>
+            <span class="text-span"><b>
+                    <p><img class="small-icon"src="Images/fullname.png" /> Full Name: David Ferrer Pérez</p>
+                    <p><img class="small-icon"src="Images/calendar.png" /> Date of Birth: 18/12/1998</p>
+                    <p><img class="small-icon"src="Images/location.png" /><a class= "loc-link" href="https://en.wikipedia.org/wiki/Alboraya"> Place of Birth: Alboraia, València, Spain</a></p>
+                    <p><img class="small-icon"src="Images/books.png" /> <a class="loc-link" href="https://www.upv.es/titulaciones/GII/">Schooling: Computer Science at UPV (Computing stream)</a></p>
+            </b>
+            </span>
+        </div>
+        
+        <div  style="background-image: url(Images/work.jpg); margin-top: 0; text-align: center;" class="fade-scroll">
+            <div style=" width: 100%; text-align: center; position:absolute">
+                <h1 style="color: #14a76c;">HOW I DEFINE MYSELF</h1>
+            </div>
+            <span id="microservices" class="profile-span"></span>
+            <span class="text-span">
+            </span>
+            <script src="js/radar.js"></script>
+            <script>
+            radar.show('#microservices', {
+                size: 500,
+                curve: false,
+                metrics: [
+                {
+                    name: "Intelligence",
+                    range: [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                    ],
+                    target: 4,
+                    actual: 4.5 - 1
+                },
+                {
+                    name: "Creativity",
+                    range: [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                    ],
+                    target: 4,
+                    actual: 4.5 - 1
+                },
+                {
+                    name: "Work capacity",
+                    range: [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                    ],
+                    target: 4,
+                    actual: 3.5 - 1
+                },
+                {
+                    name: "Teamwork",
+                    range: [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                    ],
+                    target: 4,
+                    actual: 4 - 1
+                },
+                {
+                    name: "Social skills",
+                    range: [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                    ],
+                    target: 4,
+                    actual: 4.5 - 1
+                },
+                {
+                    name: "Humility",
+                    range: [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                    ],
+                    target: 4,
+                    actual: 3.5 - 1
+                }
+                ]
+            });
+            </script>
+        </div>
+
+        <div style="background-image: url(Images/football.jpg); margin-top: 0; text-align: center;" class="fade-scroll">
+            <h1 style="color: #14a76c;" class="title-text">WHAT I LIKE</h1>
+            <div class="row">
+                <img title="Videogames" class="grid-images"src="Images/videogames.png" />
+                <img title="València CF" class="grid-images"src="Images/vcf.jpeg" />
+                <img title="Rugby" class="grid-images"src="Images/rugby.jpg" />
+                <img title="Playing football" class="grid-images"src="Images/futsal.jpg" />
+                <img title="Reading" class="grid-images"src="Images/reading.jpg" />
+                <img title="Hanging out" class="grid-images"src="Images/friends.jpg" />
+
+            </div>
+        </div>
+        
+
+        
+        
+        
+
+    </body>
+</html>
+

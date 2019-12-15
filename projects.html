@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV - David Ferrer Pérez</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background-image: url(Images/rocket.jpg);background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            
+            $(function() {
+                
+                var documentEl = $(document),
+                    fadeElem = $('.fade-scroll');
+                
+                
+                documentEl.on('scroll', function() {
+                    var currScrollPos = documentEl.scrollTop();
+                    
+                    fadeElem.each(function() {
+                        var $this = $(this),
+                            elemOffsetTop = $this.offset().top;
+                        if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/400);
+                    }); 
+                });
+                
+            });
+        
+        </script>
+        <script>
+                // When the user clicks on div, open the popup
+                
+
+                function required(){
+                    var empt = document.getElementById("address").value;
+                    var empt1 = document.getElementById("msg").value;
+
+                    if (empt == ""){
+                        alert("Please input an email address");
+                        return false;
+                        }
+                    else{
+                        if (empt1 == ""){
+                            alert("Please input a non-empty message");
+                            return false;
+                        }
+                        else{
+                            var popup = document.getElementById("myPopup");
+                            popup.classList.toggle("show");
+                        }
+                    }
+                }
+        </script>
+        <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">David Ferrer Pérez</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a class="active" href="projects.html">Projects</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="email-btn" data-toggle="modal" data-target="#myModal"><img style="height: 25px; margin-top: 2px; margin-bottom: 2px; vertical-align: top;" src="Images/Envelope.png" /></button>
+
+                <div class="mdal fade" id="myModal" role="dialog">
+                        <div class="mdal-dialog">
+                            <!-- Modal content-->
+                            <div class="mdal-content">
+                                <div class="mdal-header">
+                                    <h4 class="mdal-title">Contact me</h4>
+                                    <button class="clse" type="button" data-dismiss="modal"><b>X</b></button>
+                                </div>
+                                <div class="mdal-body">
+                                    <p style="font-size: 10pt; margin-top: 2px; margin-bottom: 2px;">Your e-mail:</p>
+                                    <input type="text" id="address" class="address-box"><br>
+                                    <p style="font-size: 10pt; margin-top: 6px; margin-bottom: 2px;">Message:</p>
+                                    <input type="text" id="msg" class="email-box"><br>
+                                </div>
+                                <div class="mdal-footer">
+                                    <div style="background-color: #14a76c; color:#272727" class="popup" onclick="required()"><p class="btn-text"><b>Send</b></p>
+                                    <span class="popuptext" id="myPopup">E-mail sent!</span></div>
+                                    <button style="border: 1px solid; font-size: 16px" type="button" class="btn btn-def" data-dismiss="modal"><b style="margin-left: -4px;">Close</b></button>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                
+                </div>
+        </header>
+        <div class="disclaimer">
+            Note: In the UPV students don't carry out big projects until 4th year. Projects shown are small deliverables made for some subjects.
+        </div>
+        
+        <div style="margin-top: 0; background-color: #50859200;" class="fade-scroll">
+            <div class="shisha-title">
+                <h1 style="text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">SM Hookah Store</h1>
+            </div>
+            <div class="row">
+                <img src="images/shishamain.png" alt="Avatar" class="shisha-image">
+                <div class="shisha-text"><b>
+                    This project was developed for a 2nd year subject named Human-Computer Interfaces.<br><br>
+
+                    I had to create a web front page using HTML, CSS and other tools. In this project we were focusing on leanring web developement basis and making an intuitive interface.
+
+                    <br><br>
+
+                    </b>
+                </div>
+            </div>
+            
+        </div>
+        <div style="margin-top: 0; background-color: rgba(2, 114, 114, 0);" class="fade-scroll">
+                <div class="project-title">
+                    <h1 style="text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;">Social Media App</h1>
+                </div>
+                <div class="row">
+                    <img src="images/proyectomenu.png" alt="Avatar" class="project-image">
+                    <div class="project-text"><b>
+                        As well as the first one, this project was developed for a 2nd year subject named Human-Computer Interfaces.<br><br>
+    
+                        The aim of this project was creating a simple application in order to allow the user to access to all their social media and other web pages from as single intutitive application. The user is allowed to add and remove applications as they wish.
+                        <br><br>
+                        This project was focused on learning basics of Application Developement. Furthermore we were asked to make it as intuitive as possible (but not elegant).
+                        <br><br>
+                        The application has been developed in Java using NetBeans to create and edit the interface.
+                        <br><br>
+    
+                        </b>
+                    </div>
+                </div>
+        </div>
+        <div style="margin-top: 0; background-color: #50859200;" class="fade-scroll">
+            <div class="shisha-title">
+            </div>
+            <div class="row">
+                <div  class="container">
+                        <h1 style="width: 100%; text-align: center;text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;" >CrossFit Class Management Application</h1>  
+                        <div  style="width: 75%; margin-top: 3%; margin-left: -5%;" id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                    
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="Images/crossfitmain.png" alt="Main Screen" style="width:100%;">
+                                <div style="color: black !important;" class="carousel-caption">
+                                    <h3></h3>
+                                    <p><b>Main Page</b></p>
+                                </div>
+                            </div>
+                    
+                            <div class="item">
+                                <img src="Images/crossfitaddgroup.png" alt="Add Group feature" style="width:100%;">
+                                <div style="color: black !important;" class="carousel-caption">
+                                    <h3></h3>
+                                    <p style="background-color: grey; "><b>Add Group feature</b></p>
+                                </div>
+                            </div>
+                        
+                            <div class="item">
+                                <img src="Images/crossfitroutine.png" alt="Add Routine feature" style="width:100%;">
+                                <div style="color: black !important;" class="carousel-caption">
+                                    <h3></h3>
+                                    <p><b>Add Routine feature</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        </div>
+                </div>
+                <div class="crossfit-text"><b>
+                    This project was developed for a 3rd year subject named Software Engineering.<br><br>
+
+                    In this project we were asked to develope an application to manage a CrossFit company schedule. This app had to be capable of accessing to and modifying a database. The user of this application was able to create, delete and edit CrossFit routines and classes
+                    <br><br>
+                    This project aim was expanding students' knowledge in Db managing, Application Developement and Interface creation.
+                    <br><br>
+                    tools used to completes this project were NetBeans for the interface design, Java for the coding and MySQL for Db managing.
+                    </b>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CV - David Ferrer Pérez</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/main.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="overflow: hidden;">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+                // When the user clicks on div, open the popup
+                
+
+                function required(){
+                    var empt = document.getElementById("address").value;
+                    var empt1 = document.getElementById("msg").value;
+
+                    if (empt == ""){
+                        alert("Please input an email address");
+                        return false;
+                        }
+                    else{
+                        if (empt1 == ""){
+                            alert("Please input a non-empty message");
+                            return false;
+                        }
+                        else{
+                            var popup = document.getElementById("myPopup");
+                            popup.classList.toggle("show");
+                        }
+                    }
+                }
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#first").click(function(){
+                    $("#firsty").fadeTo(.5,1);
+                    $("#secondy").fadeTo(.5,0);
+                    $("#thirdy").fadeTo(.5,0);
+                    $("#first").css('text-decoration', 'underline');
+                    $("#second").css('text-decoration', 'none');
+                    $("#third").css('text-decoration', 'none');
+                    $('#note').css('margin-top','28%')
+               });
+                $("#second").click(function(){
+                    $("#firsty").fadeTo(.5,0);
+                    $("#secondy").fadeTo(.5,1);
+                    $("#thirdy").fadeTo(.5,0);
+                    $("#first").css('text-decoration', 'none');
+                    $("#second").css('text-decoration', 'underline');
+                    $("#third").css('text-decoration', 'none');
+                    $('#note').css('margin-top','28%')
+                });
+                $("#third").click(function(){
+                    $("#secondy").fadeTo(.5,0);
+                    $("#firsty").fadeTo(.5,0);
+                    $("#thirdy").fadeTo(.5,1);
+                    $("#first").css('text-decoration', 'none');
+                    $("#second").css('text-decoration', 'none');
+                    $("#third").css('text-decoration', 'underline');
+                    $('#note').css('margin-top','33%')
+                });
+            });
+        </script>
+        <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">David Ferrer Pérez</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a class="active" href="education.html">Education</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="email-btn" data-toggle="modal" data-target="#myModal"><img style="height: 25px; margin-top: 2px;" src="Images/Envelope.png" /></button>
+
+                <!-- Modal -->
+                <div class="mdal fade" id="myModal" role="dialog">
+                    <div class="mdal-dialog">
+                        <!-- Modal content-->
+                        <div class="mdal-content">
+                            <div class="mdal-header">
+                                <h4 class="mdal-title">Contact me</h4>
+                                <button class="clse" type="button" data-dismiss="modal"><b>X</b></button>
+                            </div>
+                            <div class="mdal-body">
+                                <p style="font-size: 10pt; margin-top: 2px; margin-bottom: 2px;">Your e-mail:</p>
+                                <input type="text" id="address" class="address-box"><br>
+                                <p style="font-size: 10pt; margin-top: 6px; margin-bottom: 2px;">Message:</p>
+                                <input type="text" id="msg" class="email-box"><br>
+                            </div>
+                            <div class="mdal-footer">
+                                <div style="background-color: #14a76c; color:#272727" class="popup" onclick="required()"><p class="btn-text"><b>Send</b></p>
+                                <span class="popuptext" id="myPopup">E-mail sent!</span></div>
+                                <button style="border: 1px solid; font-size: 16px" type="button" class="btn btn-def" data-dismiss="modal"><b>Close</b></button>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        
+        <div style="background-image: url(Images/maths.jpg);background-attachment: fixed; background-position: center;background-repeat: no-repeat;background-size: cover;" class="fade-scroll">
+            <div id="courseshow">
+                <ul class="course">
+                    <li class="year"><a style="text-decoration: underline;" class="year-link" id="first" href="#">First Year</a></li>
+                    <li class="year"><a class="year-link" id="second" href="#">Second Year</a></li>
+                    <li class="year"><a class="year-link" id="third" href="#">Third Year</a></li>
+                </ul>
+                <table id="firsty" class="course-table">
+                    <tr class="subject">
+                        <th style="width:70%" class="table-title">Subject</th>
+                        <th class="table-title">Credits</th>
+                        <th class="table-title">Grade</th>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Fundamentals of business management</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">5,7 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Statistics</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">6,2 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Physics Foundations on Computer Science</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">6,1 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Computer Fundamentals</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">8,5 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Computer Technology</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">6,0 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Introduction to Computer Science and Programation</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">7,9 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Programming</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">6,3 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Algebra</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">5,7 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Discrete Mathematics</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">6,2 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+                    <tr class="subject">
+                        <td class="table-instance">Mathematical Analysis</td>
+                        <td class="table-instance">6,00</td>
+                        <td class="table-instance">7,2 <b title="High Academic Performance Group">(ARA)</b></td>
+                    </tr>
+
+                </table>
+                <table id="secondy" style="opacity:0;" class="course-table">
+                    <tr class="subject">
+                            <th style="width:70%" class="table-title">Subject</th>
+                            <th class="table-title">Credits</th>
+                            <th class="table-title">Grade</th>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Ethics and Profesionalism</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">6,6 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Data Strucutres and Algorithms</td>
+                            <td class="table-instance">6,00</td>
+                            <td class="table-instance">5,7 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Human-Computer Interfaces</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">5,9 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Computer Organization</td>
+                            <td class="table-instance">9,00</td>
+                            <td class="table-instance">5,5 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Programming Languages, Technologies and Paradigms</td>
+                            <td class="table-instance">6,00</td>
+                            <td class="table-instance">6,7 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Computer Networks</td>
+                            <td class="table-instance">9,00</td>
+                            <td class="table-instance">5,4 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Concurrency and Distributed Systems</td>
+                            <td class="table-instance">6,00</td>
+                            <td class="table-instance">6,8 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Operating Systems Fundamentals</td>
+                            <td class="table-instance">6,00</td>
+                            <td class="table-instance">6,3 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Automata Theory and Formal Languages</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">6,2 <b title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">German A1</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">7,1</td>
+                        </tr>
+                </table>
+                <table id="thirdy" style="opacity:0;" class="course-table">
+                    <tr class="subject">
+                            <th style="width:70%"  class="table-title">Subject</th>
+                            <th class="table-title">Credits</th>
+                            <th class="table-title">Grade</th>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Database and Information Systems</td>
+                            <td class="table-instance">6,00</td>
+                            <td class="table-instance">6,0 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Parallel Computing</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">5,6 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Computer Architecture and Engineering</td>
+                            <td class="table-instance">6,00</td>
+                            <td class="table-instance">8,0 <b title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Project Management</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">7,8</td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Software Engineering</td>
+                            <td class="table-instance">6,00</td>
+                            <td class="table-instance">6,3 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Inteligent Systems</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">8,0 <b title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Network Information System Technology</td>
+                            <td class="table-instance">6,00</td>
+                            <td class="table-instance">6,7 <b  title="High Academic Performance Group">(ARA)</b></td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Optimization Techniques</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">6,4</td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Computability and Complexity</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">5,4</td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Information Storage and Retrieval Systems</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">7,8</td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Intelligent Agents</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">7,2</td>
+                        </tr>
+                        <tr class="subject">
+                            <td class="table-instance">Perception</td>
+                            <td class="table-instance">4,50</td>
+                            <td class="table-instance">7,2</td>
+                        </tr>
+    
+                </table>
+            </div>
+            <div><p id="note"style="margin-left:5%; position: sticky; margin-top:28%; font-size: 9pt;"><b>*ARA stands for Alto Rendimiento Académico (High Academic Performance). It is a reduced group with higher difficulty where subjects are taught in English. Students can join this group for the first 5 semesters.</b></p></div>
+        </div>
+    </body>
+</html>
